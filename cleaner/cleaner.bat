@@ -1,22 +1,27 @@
-rem made by taeguk
-rem version : 0.0.1
+ï»¿rem made by taeguk
+rem version : 0.0.3
 
-echo [*] Remove ¹ÙÅÁÈ­¸é
+echo [*] Remove ë°”íƒ•í™”ë©´
 del /s /q "C:\Users\R912\Desktop\*.*"
 del /s /q "C:\Users\R912\Desktop\*.lnk"
 for /d %%a in ("C:\Users\R912\Desktop\*.*") do (
  rmdir "%%a" /s /q
 )
-mklink "C:\Users\R912\Desktop\½ÃÇèÀßº¸¼¼¿ä.lnk" "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
+del /s /q "C:\Users\Public\*.*"
+del /s /q "C:\Users\Public\*.lnk"
+for /d %%a in ("C:\Users\Public\Desktop\*.*") do (
+ rmdir "%%a" /s /q
+)
+mklink "C:\Users\R912\Desktop\ì‹œí—˜ì˜ë³´ì„¸ìš”.lnk" "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
 
 echo [*] Remove Downloads folder.
 del /s /q "C:\Users\R912\Downloads\*.*"
 
-echo [*] Remove Ä«Ä«¿ÀÅå¹ŞÀºÆÄÀÏ folder.
-del /s /q "C:\Users\R912\Documents\Ä«Ä«¿ÀÅå ¹ŞÀº ÆÄÀÏ\*.*"
+echo [*] Remove ì¹´ì¹´ì˜¤í†¡ë°›ì€íŒŒì¼ folder.
+del /s /q "C:\Users\R912\Documents\ì¹´ì¹´ì˜¤í†¡ ë°›ì€ íŒŒì¼\*.*"
 
 echo [*] Remove codes and Visual folders.
-del /s /q "C:\Users\R912\Documents\*.c" "C:\Users\R912\Documents\*.cpp"
+del /s /q "C:\Users\R912\*.c" "C:\Users\R912\*.cpp"
 del /q "C:\Users\R912\Documents\Visual*"
 for /d %%a in ("C:\Users\R912\Documents\Visual*") do (
  del /s /q "%%a\*.c"
